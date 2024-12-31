@@ -10,17 +10,17 @@ html , body {
     height: 100%;
     width: 100%;
 }
-
-#crsr{
-    height: 2.3vw;
-    width: 2.3vw;
-    border-radius: 50%;
-    border: 2px solid #fcfcfc;
-    position: fixed;
-    z-index: 999;
-    mix-blend-mode: difference;
-    transform: translate(-50%,-50%);
+body{
+    overflow-x: hidden;
 }
+
+.mousefollower {
+    border: 3px solid #fff;
+    background-color: rgb(255, 255, 255);
+    scale: 2;
+    mix-blend-mode: difference;
+}
+
 
 #loader{
     height: 100%;
@@ -73,7 +73,7 @@ html , body {
     animation-iteration-count: infinite;
 }
 
-@keyframes anime {
+@keyframes Loadinganime {
     0%{
         font-family: "plain light";
         -webkit-text-stroke: 1px #fff;
@@ -106,14 +106,14 @@ html , body {
 
 #main{
     position: relative;
-    background-color: #030303;
+    background-color: #151515;
 
 }
 
 #page1{
     height: 100vh;
     width: 100%;
-    background-color: #151515;
+    /* background-color: #151515; */
 }
 
 #page1 #nav{
@@ -139,11 +139,11 @@ html , body {
     width: 72%;
     margin-left: 27%;
     height: fit-content;
-    overflow: hidden;
+    overflow-y: hidden;
     display: flex;
     align-items: center;
-    position: relative;
-    z-index: 9999;
+    /* position: relative; */
+    /* z-index: 9999; */
 }
 
 .hero:nth-child(2){
@@ -155,6 +155,16 @@ html , body {
     font-weight: 600;
     text-transform: uppercase;
     line-height: 7.2vw;
+    position: relative;
+}
+#hero1::before{
+    content: "01";
+    position: absolute;
+    font-size: 3vw;
+    font-weight: 100;
+    font-family: "silk serif";
+    left: 20%;
+    top: 29%;
 }
 
 .hero h2{
@@ -162,9 +172,462 @@ html , body {
     font-weight: 600;
     text-transform: uppercase;
     line-height: 7.2vw;
+    border-bottom: 0.5vw solid #fff;
+    /* padding-bottom: 0.8vw; */
+    /* transition: all ease 0.3s; */
+}
+.hero h3{
+    font-size: 7vw;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 7.2vw;
+    padding-bottom: 0.8vw;
 }
 .hero h2:hover{
     -webkit-text-stroke: 2px #fff;
     color: transparent;
+    font-weight: 400;
+    border-bottom: 0.5vw solid #ffffff00;
+
+}
+
+#page2{
+    height: 80vh;
+    width: 100%;
+    padding-top: 12vh;
+    position: relative;
+}
+
+
+
+#video-container{
+    height: 66vh;
+    width: 71vw;
+    position: relative;
+    left:28%;
+    background-image: url("https://obys.agency/wp-content/uploads/2022/11/Showreel-2022-preview-1.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+#video-container video {
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    opacity: 0;
+}
+#video-container img{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    top: 0;
+}
+
+#video-container video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#video-cursor{
+    background-color: #ffa63d;
+    height: 8.5vw;
+    width: 8.5vw;
+    border-radius: 50%;
+    position: absolute;
+    top: -15%;
+    left: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+
+#video-cursor i{
+    font-size: 2vw;
+}
+
+#page3{
+    min-height: 100vh;
+    width: 100%;
+    /* background-color: rgb(95, 95, 95); */
+    position: relative;
+    padding: 16vh 2vw;
+}
+#page3 h1{
+    font-size: 7vw;
+    text-transform: uppercase;
+    position: relative;
+    margin-left: 28vw;
+}
+#page3 h1::before{
+    content: "02";
+    position: absolute;
+    font-size: 3vw;
+    font-weight: 100;
+    font-family: "silk serif";
+    left: -12%;
+    top: 8%;
+}
+
+#page3 .underline{
+    margin-left: 28vw;
+}
+
+#image-div-container{
+    /* background-color: red; */
+    padding: 1vw;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+.image-div {
+    height: 42vw;
+    width: 31vw;
+    position: relative;
+    overflow: hidden;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    margin: 1vw;
+    /* background-color: blue; */
+}
+
+.image-div:nth-child(1) {
+    height: 29vw;
+    width: 21vw;
+}
+
+.image-div img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.page3-circle1 {
+    height: 23vw;
+    width: 23vw;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 23vh;
+    position: relative;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    margin-left: 10vw;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+
+.page3-circle1 svg {
+    height: 30%;
+}
+
+.page3-circle2 {
+    height: 23vw;
+    width: 23vw;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    /* margin-top: 23vh; */
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    /* margin-left: 10vw; */
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 2vw;
+    margin-right: 3vw;
+}
+
+.page3-circle2 svg {
+    height: 30%;
+    rotate: -45deg;
+}
+
+.circle-in {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    /* display: ; */
+    -webkit-transition: all ease 0.5s;
+    -o-transition: all ease 0.5s;
+    transition: all ease 0.5s;
+    scale: 0;
+    border-radius: 50%;
+}
+
+.circle-in p {
+    font-size: 0.95vw;
+    color: #000;
     font-weight: 500;
+    width: 60%;
+    scale: 0;
+    -webkit-transition: all ease 0.5s;
+    -o-transition: all ease 0.5s;
+    transition: all ease 0.5s;
+    -webkit-transition-delay: 0.3s;
+         -o-transition-delay: 0.3s;
+            transition-delay: 0.3s;
+    opacity: 0;
+}
+
+.page3-circle1:hover .circle-in {
+    scale: 1;
+}
+
+.page3-circle1:hover p {
+    scale: 1;
+    opacity: 1;
+}
+
+.page3-circle2:hover .circle-in {
+    scale: 1;
+}
+
+.page3-circle2:hover p {
+    scale: 1;
+    opacity: 1;
+}
+
+#page4{
+    min-height: 100vh;
+    width: 100%;
+    /* background-color: rgb(95, 95, 95); */
+    position: relative;
+    padding-top: 2vh 0;
+}
+#page4-content{
+    width: 72vw;
+    position: relative;
+    margin-left: 28%;
+}
+#page4-content h1{
+    font-size: 7vw;
+    text-transform: uppercase;
+    position: relative
+}
+#page4-content h1::before{
+    content: "03";
+    position: absolute;
+    font-size: 3vw;
+    font-weight: 100;
+    font-family: "silk serif";
+    left: -12%;
+    top: 8%;
+}
+
+#page4-content .underline{
+    height: 1.3px;
+    width: 100%;
+    background-color: #fff;
+    margin: 5vw 0;
+}
+#page4-content>p{
+    font-size: 2.05vw;
+    width: 50%;
+    margin-bottom: 3vw;
+}
+
+#page4-flex{
+    display: flex;
+}
+#page4-flex img{
+    width: 48%;
+}
+#page4-flex p{
+    font-size: 0.9vw;
+    width: 19%;
+    margin-left: 1vw;
+}
+
+#page4-blue-div{
+    background-color: #3f7df4;
+    width: 33vw;
+    padding: 3vw;
+    position: relative;
+    margin-top: -34vh;
+    margin-left: 27vw;
+
+}
+.blue-div-elem{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 1.4vw 0;
+    border-bottom: 2px solid #ffffffdf;
+}
+.blue-div-elem h4{
+    font-size: 1.4vw;
+    font-weight: 500;
+}
+
+.blue-div-elem p{
+    width: 40%;
+    font-size: 0.7vw;
+}
+
+#page5{
+    min-height: 75vh;
+    width: 100%;
+    position: relative; 
+    margin: 7vw 0;
+}
+.elem{
+    white-space: nowrap;
+    overflow-x: hidden;
+    margin-bottom: -0.8vw;
+}
+.elem h1{
+    font-size: 6vw;
+    -webkit-text-stroke: 1px #fff;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: transparent;
+    display: inline-block;
+    margin-right: 16px;
+    animation-name: anime;
+    animation-duration:10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+@keyframes anime{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(calc(-100% - 20px));
+    }
+}
+
+.elem2{
+    white-space: nowrap;
+    overflow-x: hidden;
+    margin-bottom: -0.8vw;
+
+}
+.elem2 h1{
+    font-size: 6vw;
+    -webkit-text-stroke: 1px #fff;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: transparent;
+    display: inline-block;
+    transform: translateX(calc(-100% -20px));
+    animation-name: anime;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+}
+.elem span{
+    font-style: italic;
+    font-family: 'silk serif';
+    color: transparent;
+}
+.elem2 span{
+    font-style: italic;
+    font-family: 'silk serif';
+    color: transparent;
+}
+#footer{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    padding-left: 28vw;
+    padding-right: 2vw;
+    margin-bottom: 20vh;
+}
+#footer h1{
+    font-size: 8vw;
+    text-transform: uppercase;
+    position: relative;
+}
+#footer h1::before{
+    content: "04";
+    position: absolute;
+    font-size: 3vw;
+    font-weight: 100;
+    font-family: "silk serif";
+    left: -12%;
+    top: 8%;
+}
+.underline{
+    height: 1px;
+    width: 100%;
+    background: #fff;
+    margin: 3vw 0;
+}
+#footer-div{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-right: 15vw;
+    padding-top: 4vw;
+    margin-bottom: 6vw;
+}
+#footer-div h6{
+    font-size: 0.9vw;
+    margin-bottom: 1.6vw;
+}
+.box{
+    width: 20%;
+}
+#footer-div h5{
+    font-size: 1.4vw;
+    font-weight: 500;
+    /* margin: 0.2vh 0; */
+}
+#footer>h5{
+    font-weight: 500;
+    font-size: 1vw;
+}
+._canvas_container{
+    z-index: 999999 !important;
+    pointer-events: none;
+}
+
+#flag {
+    height: 25vw;
+    position: absolute;
+    top: 0;
+    opacity: 0;
+
+    left: 0;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+}
+
+#hero3 {
+    /* background-color: red; */
+    z-index: 999;
+    position: relative;
 }
